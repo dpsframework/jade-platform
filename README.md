@@ -5,7 +5,7 @@
 ## Rev.6874 (11 de julio de 2023)
 
 > Revision: 6874<br>
-  Author: scagliotti<br>
+  Author: Enrico Scagliotti and Giovanni Caire<br>
   Date: martes, 11 de julio de 2023 14:59:35<br>
   Message:<br>
   Retectored AgentMobilityService to permit overloading of fetchClassFile method
@@ -21,7 +21,7 @@
 
 
 
-## Build Process: `jade-4.6.0-6874.jar` with Maven
+## Build Process: `jade-4.6.0-6874.jar` with Maven and OpenJDK-17
 
 - Once Maven and Java JDK-17LTS are configured:
 
