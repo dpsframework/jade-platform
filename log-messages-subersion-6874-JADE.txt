@@ -7,3 +7,53 @@ Retectored AgentMobilityService to permit overloading of fetchClassFile method
 Modified : /trunk/build.properties
 Modified : /trunk/src/jade/core/mobility/AgentMobilityService.java
 
+
+## Results with Java JDK-17
+
+```shell
+
+> \p21-jade-fipa-4.6.0 >  java -version
+
+  java version "17.0.5" 2022-10-18 LTS
+  Java(TM) SE Runtime Environment (build 17.0.5+9-LTS-191)
+  Java HotSpot(TM) 64-Bit Server VM (build 17.0.5+9-LTS-191, mixed mode, sharing)
+
+
+> \p21-jade-fipa-4.6.0 >  mvn package
+
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------< com.tilab.jade:jade >-------------------------
+[INFO] Building p21-jade-fipa-4.6.0 4.6.0-6874
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jade ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 166 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ jade ---
+[INFO] Compiling 2292 source files to C:\var\p21-jade-fipa-4.6.0\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jade ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\var\p21-jade-fipa-4.6.0\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ jade ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ jade ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:3.2.2:jar (default-jar) @ jade ---
+[INFO] Building jar: C:\var\p21-jade-fipa-4.6.0\target\jade-4.6.0-6874.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:12 min
+[INFO] Finished at: 2023-09-20T00:25:06+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+
+```
+
