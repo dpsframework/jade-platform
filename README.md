@@ -1,11 +1,32 @@
-# p21-JADE-FIPA-4.6.0
+# JADE Multi-Agent Platform 4.6.0 
 
-## 1. Compiling proposal: p21-JADE-FIPA-4.6.0 (COMPLETED)
+## Rev.6874 (11 de julio de 2023)
+
+> Revision: 6874
+  Author: scagliotti
+  Date: martes, 11 de julio de 2023 14:59:35
+  Message:
+  Retectored AgentMobilityService to permit overloading of fetchClassFile method
+
+----
+
+> Modified : /trunk/build.properties
+  Modified : /trunk/src/jade/core/mobility/AgentMobilityService.java
+  From     : https://jade.tilab.com/svn/jade/trunk
+  Changelog: https://jade.tilab.com/doc/ChangeLog
+  
+  
+
+**Fig. 1**: 
+
+![JADE-4.6.0-Revision-6874-OpenJDK-17](./images/logoJade.png)
 
 
-### 1.1. How to generate: `jade-4.6.0-6871.jar` with Maven
 
-- From the console, once Apache-Maven is correctly installed:
+
+## 1. Build Process: `jade-4.6.0-6874.jar` with Maven
+
+- Once Maven is configured:
 
 ```shell
 git clone https://github.com/dpsframework/p21-jade-fipa-4.6.0.git
@@ -14,7 +35,8 @@ cd p21-jade-fipa-4.6.0
 mvn package
 ```
 
-- In directory: `./target/`, the file `jade-4.6.0-6871.jar` is the full version of the JADE Platform that can operate autonomously until the future revision of JADE.
+- Above `./target/` directory is:  `jade-4.6.0-6874.jar`
+The full version of the JADE Platform that can operate autonomously until the future revision of JADE.
 
 
 
@@ -26,15 +48,9 @@ mvn package
 ```shell 
  cd target
  
- java -jar jade-4.6.0-6871.jar -gui
+ java -jar jade-4.6.0-6874.jar -gui
 ```
 
-
-
-
-**Fig. 1**: 
-
-![Test results with JADE-4.6.0-r68711 compiled with OpenJDK-17](./images/test-jade-rma-agent-460-6871-Java-JDK-17.png)
 
 
 

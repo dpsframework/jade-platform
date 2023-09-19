@@ -1,0 +1,9 @@
+Revision: 6874
+Author: scagliotti
+Date: martes, 11 de julio de 2023 14:59:35
+Message:
+Retectored AgentMobilityService to permit overloading of fetchClassFile method
+----
+Modified : /trunk/build.properties
+Modified : /trunk/src/jade/core/mobility/AgentMobilityService.java
+

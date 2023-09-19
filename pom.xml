@@ -2,9 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tilab.jade</groupId>
   <artifactId>jade</artifactId>
-  <version>4.6.0-6871</version>
+  <version>4.6.0-6874</version>
   <name>p21-jade-fipa-4.6.0</name>
-  <description>Core JADE Platform to JKD-11 proposal</description>
+  <description>JADE Multi-Agent Compiled with Java JDK-11, 17, etc.</description>
 
 
 	<properties>
