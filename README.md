@@ -23,19 +23,34 @@
 
 ## Build Process: `jade-4.6.0-6874.jar` with Maven and OpenJDK-17
 
-- Once Maven and Java JDK-17LTS are configured:
+- **1.- On the local machine: when Maven and Java JDK-17LTS have been configured**
 
 ```shell
+  git clone https://github.com/dpsframework/JADE-FIPA-4.6.0.git
+  cd JADE-FIPA-4.6.0
+
+  mvn package
+```
+
+
+- **2. Through an official Maven-OpenJDK connector: using docker with the following instruction**
+
+You can run a Maven project by using the Maven Docker image directly, passing a Maven command to docker run:
+
+```
 git clone https://github.com/dpsframework/JADE-FIPA-4.6.0.git
 cd JADE-FIPA-4.6.0
 
-mvn package
+(As proposed in: https://hub.docker.com/_/maven)
+
+docker run -it --rm --name jadeBuilder -v "$(pwd)":/usr/src/jade -w /usr/src/jade maven:3.8.3-openjdk-17  mvn package
+
+
 ```
 
-- Above `./target/` directory is:  `jade-4.6.0-6874.jar`
+
+- In the `./target/` directory is the file: `jade-4.6.0-6874.jar`
 The full version of the JADE Platform that can operate autonomously until the future revision of JADE.
-
-
 
 
 
