@@ -26,8 +26,8 @@
 - Once Maven and Java JDK-17LTS are configured:
 
 ```shell
-git clone https://github.com/dpsframework/p21-jade-fipa-4.6.0.git
-cd p21-jade-fipa-4.6.0
+git clone https://github.com/dpsframework/JADE-FIPA-4.6.0.git
+cd JADE-FIPA-4.6.0
 
 mvn package
 ```
