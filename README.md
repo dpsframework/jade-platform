@@ -33,7 +33,7 @@
 ```
 
 
-- **2. Through an official Maven-OpenJDK connector: using docker with the following instruction**
+- **2.- Through an official Maven-OpenJDK-17 imagen: using docker with the following instruction**
 
 You can run a Maven project by using the Maven Docker image directly, passing a Maven command to docker run:
 
@@ -49,8 +49,22 @@ docker run -it --rm --name jadeBuilder -v "$(pwd)":/usr/src/jade -w /usr/src/jad
 ```
 
 
-- In the `./target/` directory is the file: `jade-4.6.0-6874.jar`
-The full version of the JADE Platform that can operate autonomously until the future revision of JADE.
+- **2.(bis).- Through an official Maven-OpenJDK-8 imagen:**
+
+```
+git clone https://github.com/dpsframework/JADE-FIPA-4.6.0.git
+cd JADE-FIPA-4.6.0
+
+
+docker run -it --rm --name jadeJDK8 -v "$(pwd)":/usr/src/jade -w /usr/src/jade maven:3.3-jdk-8 mvn -f pom8.xml package
+
+
+```
+
+
+
+- **3.- In the `./target/` directory is the file:** `jade-4.6.0-6874.jar`
+The full version of the JADE Platform that can operate autonomously.
 
 
 
