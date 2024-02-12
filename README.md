@@ -77,6 +77,3 @@ The full version of the JADE Platform that can operate autonomously.
  java -jar jade-4.6.0-6874.jar -gui
 ```
 
-
-
-

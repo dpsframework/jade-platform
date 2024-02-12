@@ -1,15 +1,15 @@
 Main-Class: jade.Boot
 
 Name: Jade Informations
-Specification-Version: 4.6.0
+Specification-Version: 4.6.1
 SVN-Revision: 6874
 SVN-Date: 11-07-2023
 SVN-Author: Enrico Scagliotti and Giovanni Caire 
 SVN-Source: https://jade.tilab.com/svn/jade/trunk
 SVN-DateComplete: martes, 11 de julio de 2023 14:59:35
 SVN-Message: Retectored AgentMobilityService to permit overloading of fetchClassFile method
-Proposal-name: P21-JADE-FIPA-4.6.0  
-Proposal-repo:  GitHub <https://github.com/dpsframework/p21-jade-fipa-4.6.0>
+Proposal-name: JADE-FIPA-4.6.1  
+Proposal-repo: GitHub <https://github.com/dpsframework/p21-jade-fipa-4.6.0>
 Proposal-corba: <https://repo1.maven.org/maven2/org/glassfish/corba/glassfish-corba-omgapi/4.1.0/>
 Proposal-corba-file: glassfish-corba-omgapi-4.1.0-sources.jar 2017-07-14 15:15  1470786 Bytes
 Proposal-apache-commons: <https://archive.apache.org/dist/commons/codec/binaries/commons-codec-1.3.tar.gz>
