@@ -81,4 +81,8 @@ Testing:
 
 ```
 
+![JADE Java DEvelopment Framework v4.6.1 - rev6874 testagent](./images/jade-rma-testagent-v461-r6874.png)
+
+
+
 
