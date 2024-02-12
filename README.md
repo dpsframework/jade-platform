@@ -36,7 +36,7 @@
 Testing: 
 
   cd target
-  java -jar jade-4.6.0-6874.jar -gui -agents Test24:jade.tools.testagent.TestAgent
+  java -jar jade-4.6.1-6874.jar -gui -agents Test24:jade.tools.testagent.TestAgent
   
 ```
 
@@ -58,7 +58,7 @@ docker run -it --rm --name jadeBuilder -v "$(pwd)":/usr/src/jade -w /usr/src/jad
 Testing: 
 
   cd target
-  java -jar jade-4.6.0-6874.jar 
+  java -jar jade-4.6.1-6874.jar 
 
 
 ```
@@ -77,9 +77,8 @@ docker run -it --rm --name jadeJDK8 -v "$(pwd)":/usr/src/jade -w /usr/src/jade m
 Testing: 
 
   cd target
-  java -jar jade-4.6.0-6874.jar 
+  java -jar jade-4.6.1-6874.jar 
 
 ```
-
 
 
