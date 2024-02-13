@@ -1,4 +1,4 @@
-# JADE JAVA Agent DEvelopment Framework 4.6.1
+# JADE Java Agent DEvelopment Framework 4.6.1
 
 > JADE version 4.6.1 - revision 6874 compiled with OpenJDK-17LTS and Maven or with Docker Java image.
 
