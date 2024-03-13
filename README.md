@@ -44,7 +44,7 @@
 ```
 
 ```shell
-  ava -jar jade-platform-4.6.1.jar -gui -agents Test24:jade.tools.testagent.TestAgent
+   java -jar jade-platform-4.6.1.jar -gui -agents Test24:jade.tools.testagent.TestAgent
 ```
 
 
