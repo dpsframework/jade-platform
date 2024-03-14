@@ -1,8 +1,8 @@
 # Java Agent DEvelopment platform (JADE &copy;)
 
-> JADE version 4.6.1 - revision 6874 compiled with OpenJDK-17LTS and Maven or with Docker Java image.
+> Latest version of the JADE Platform, ready to be compiled with Maven 3.9.6 locally and using a Docker container, for versions Java8 and Java17 or higher. JADE is a registered trademark of TILAB.com [https://jade.tilab.com/](https://jade.tilab.com/).
 
-![JADE version 4.6.1 - revision 6874 compiled with OpenJDK-17LTS](./images/logoJade.png)
+![JADE version 4.6.1 - revision 6874 ready to deploy in container](./images/logoJade.png)
 
 ## Rev.6874 (11 de julio de 2023)
 
@@ -17,31 +17,48 @@
   Modified : /trunk/src/jade/core/mobility/AgentMobilityService.java<br>
   From     : https://jade.tilab.com/svn/jade/trunk<br>
   Changelog: https://jade.tilab.com/doc/ChangeLog<br>
+  Tilab//JADE: https://jade.tilab.com/maven/com/tilab/jade/jade/4.6.0/jade-4.6.0.pom<br>
 
 
 
 
 
-### Local build process with Maven and OpenJDK-17:
+### Local construction process:
 
-> On the local machine: when Maven and Java JDK-17LTS have been configured.
+> Check Maven and Java versions `(mvn --version     java -version)`
 
 
 ```shell
-  git clone https://github.com/dpsframework/JADE-FIPA-4.6.1.git
+  git clone https://github.com/dpsframework/jade-platform.git
 ```
 
 ```shell
-  cd JADE-FIPA-4.6.1
-  mvn package
+   cd jade-platform
 ```
+
+
+- **OpenJDK-17**:
+
+```shell
+   mvn package
+```
+
+
+
+- **Java-8**:
+
+```shell
+   mvn -f pom8.xml package 
+```
+
+
   
-  
-#### Testing: 
+#### Verification: 
 
 ```shell
-  cd target
+   cd target
 ```
+
 
 ```shell
    java -jar jade-platform-4.6.1.jar -gui -agents Test24:jade.tools.testagent.TestAgent
@@ -50,23 +67,45 @@
 
 
 
-### Docker build process with Maven an OpenJDK-17 image:
+### Container construction process with Docker images:
 
-> Through an official Maven-OpenJDK-17 imagen using docker with the following instruction.
+> On Ubuntu native or with WSL2 Ubuntu console and Docker installed: 
 
-You can run a Maven project by using the Maven Docker image directly, passing a Maven command to docker run:
 
-```shell
-git clone https://github.com/dpsframework/JADE-FIPA-4.6.1.git
-cd JADE-FIPA-4.6.1
-```
-- (As proposed in: https://hub.docker.com/_/maven)
+#### Old images: Maven 3.8.3 and Maven 3.3:
+
 
 ```shell
-docker run -it --rm --name jadeBuilder -v "$(pwd)":/usr/src/jade -w /usr/src/jade maven:3.8.3-openjdk-17  mvn package
+   git clone https://github.com/dpsframework/jade-platform.git
+   cd jade-platform
 ```
 
-#### Testing: 
+- **OpenJDK-17**:
+
+```shell
+   docker run --interactive --tty --rm        \
+              --name jadeBuilder17            \
+              --volume "$(pwd)":/usr/src/jade \
+              --workdir /usr/src/jade         \
+                maven:3.8.3-openjdk-17  mvn package
+              
+```
+
+
+- **Java-8**:
+
+```shell
+   docker run --interactive --tty --rm             \
+              --name jadeBuilder8                  \
+              --volume "$(pwd)":/usr/src/jade      \
+              --workdir /usr/src/jade              \
+                maven:3.3-jdk-8 mvn -f pom8.xml package 
+              
+```
+
+
+
+#### Verification: 
 
 ```shell
   cd target
@@ -74,22 +113,63 @@ docker run -it --rm --name jadeBuilder -v "$(pwd)":/usr/src/jade -w /usr/src/jad
 ```
 
 
-### Docker build process with Maven an OpenJDK-8 image:
+### Docker latest build process without vulnerabilities (reviewd: 2024-03-14):
 
-> Through an official Maven-OpenJDK-8 image.
+> Docker image: maven:3.9.6-amazoncorretto-17-al2023. Explorer this image [here](https://hub.docker.com/layers/library/maven/3.9.6-amazoncorretto-17-al2023/images/sha256-a0dab88160324b7ed98f70dd912ef027b66b2242200c5d6c25de692197ab68ec?context=explore)
+
+
+> Test layers' container with: `docker run --interactive --tty --entrypoint=/bin/bash ID-IMAGE --login`
+
+
 
 ```shell
-git clone https://github.com/dpsframework/JADE-FIPA-4.6.1.git
-cd JADE-FIPA-4.6.1
+   git clone https://github.com/dpsframework/jade-platform.git
 ```
 
-docker run -it --rm --name jadeJDK8 -v "$(pwd)":/usr/src/jade -w /usr/src/jade maven:3.3-jdk-8 mvn -f pom8.xml package
-
-Testing: 
 
 ```shell
- cd target
- java -jar jade-platform-4.6.1.jar -gui -agents Test24:jade.tools.testagent.TestAgent
+   cd jade-platform
+```
+
+
+
+- **Java JDK-17**:
+
+
+```shell
+   docker run --interactive --tty --rm        \
+              --name jadeamazon17             \
+              --volume "$(pwd)":/usr/src/jade \
+              --workdir /usr/src/jade         \
+                maven:3.9.6-amazoncorretto-17-al2023   \
+                mvn package
+
+```
+
+              
+- **IBM Java 8**:
+              
+```shell
+   docker run --interactive --rm              \
+              --name jadeibm8                 \
+              --volume "$(pwd)":/usr/src/jade \
+              --workdir /usr/src/jade         \
+                maven:3.9.6-ibmjava-8   \
+                mvn --file pom8.xml package
+       
+```
+
+
+
+#### Verification: 
+
+
+```shell
+   cd target
+```
+
+```shell
+   java -jar jade-platform-4.6.1.jar -gui -agents Test24:jade.tools.testagent.TestAgent
 ```
 
 ![JADE Java DEvelopment Framework v4.6.1 - rev6874 testagent](./images/jade-rma-testagent-v461-r6874.png)
