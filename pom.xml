@@ -3,10 +3,15 @@
   <groupId>com.tilab.jade</groupId>
   <artifactId>jade-platform</artifactId>
   <version>4.6.1</version>
-  <name>JADE Java Agent DEvelopment platform 4.6.1</name>
-  <description>JADE Platform v4.6.1-r6874 compiled with JDK-17LTS</description>
-
-
+  <name>Java Agent DEvelopment platform (JADE)</name>
+  <description>JADE Platform v4.6.1 rev.6874</description>
+  
+  <!-- <author>E.Scaggliotti (JADE Team)</author> -->
+  <!-- <date>martes, 11 de julio de 2023 14:59:35</date> -->
+  <!-- <message>Retectored AgentMobilityService to permit overloading of fetchClassFile method</message> -->
+  <!-- <objective>Deploy in containers and orchestrate with Swarm or Kubernetes, Multi-Agent Applications developed in Java with the JADE Platform (Rev. 2024-03-14)</objective> -->
+  
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
